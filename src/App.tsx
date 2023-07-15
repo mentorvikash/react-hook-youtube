@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Button } from "@mui/material";
+import useCouter from "./custom-hooks/couter";
 
 function App() {
+  const count = useCouter(2,500)
+  const count1 = useCouter(1,1000)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1>{count}</h1>
+    <h2>{count1}</h2>
+      <Button variant="contained">First Button</Button>;
+    </>
   );
 }
 
 export default App;
+
+// advance fun => custom hooks
